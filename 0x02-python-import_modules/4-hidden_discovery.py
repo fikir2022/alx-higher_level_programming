@@ -1,7 +1,9 @@
-q#!/usr/bin/python3
+#!/usr/bin/python3
+import hidden_4
+
 if __name__ == "__main__":
-    import hidden_4
-    list = dir(hidden_4)
-    for i in (list):
-        if i[0] != '_' and i[1] != '_':
-            print(i)
+    file = dir(hidden_4)
+    length = len(file)
+    for i in range(0, length):
+        if file[i][0:2] != "__":
+            print(file[i])
