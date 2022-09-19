@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 """
 nqueens backtracking program to print the coordinates of n queens
 on an nxn grid such that they are all in non-attacking positions
@@ -60,4 +60,3 @@ if __name__ == "__main__":
 
     # start the recursive process at x = 0
     nqueens(0)
-
