@@ -1,7 +1,7 @@
 #!/usr/bin/node
+// JS Script
 module.exports = class Rectangle {
   constructor (w, h) {
-    // If w or h is equal to 0 or not a positive integer, create empty object
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
@@ -10,10 +10,16 @@ module.exports = class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        process.stdout.write('X');
-      }
-      if (i < this.height) { process.stdout.write('\n'); }
+      console.log('X'.repeat(this.width));
     }
+  }
+
+  rotate () {
+    this.width = [this.height, this.height = this.width][0];
+  }
+
+  double () {
+    this.width *= 2;
+    this.height *= 2;
   }
 };
